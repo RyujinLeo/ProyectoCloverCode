@@ -1,0 +1,5 @@
+.navbarinicio{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: ridge;
+}
