@@ -1,0 +1,21 @@
+
+#contadorproyectos{
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#profilepictop{
+    border-radius: 100%;
+    height: 50px;
+    margin-top: -10px;
+  }
+  #botonprof{
+    height: 60px;
+    border-radius: 100%;
+  }
+
+  #userimg{
+    height: 100%;
+    border-radius: 100%;
+  }
