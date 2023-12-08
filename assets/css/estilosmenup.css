@@ -142,12 +142,13 @@ font-size: 1rem;
 
 
 .dropdown-content{
-    display: none;
-    position: sticky;
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0px 10px 10px 0px;
-    background-color: #354a5f;
+  display: none;
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px;
+  background-color: #354a5f;
+  right: 20px;
   }
   
   
