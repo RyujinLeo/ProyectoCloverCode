@@ -1,3 +1,5 @@
+var usuarioseleccionado = null;
+
 function registrar(){
     var nameInput = document.getElementById("name");
     var emailInput = document.getElementById("email");
@@ -20,3 +22,33 @@ function registrar(){
     }
      
 }
+
+
+
+async function agregarUsuario() {
+    const nombre = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('contra').value;
+
+    try {
+      const response = await fetch('http://localhost:3000/usuarios/registrar', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ nombre, email, password }),
+      });
+
+      const data = await response.json();
+
+      // Muestra el resultado en la página
+      window.location.href = "/assets/html/login.html";
+     // document.getElementById('resultado').innerText = data.mensaje;
+      alert("Validation correcta!");
+
+    } catch (error) {
+
+    }
+
+  };
+
