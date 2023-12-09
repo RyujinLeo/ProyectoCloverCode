@@ -11,9 +11,8 @@ function vermenuprincipal(){
      // Check de la validez
      if (isEmailValid && isPasswordValid) {
         alert("Validation correcta!");
-        agregarUsuario()
+        verificarUsuario()
         // Redirect to another HTML file
-        window.location.href= "/assets/html/Menuprincipal.html"
     } else {
         alert("Por favor ingrese bien sus datos.");
        
@@ -34,10 +33,12 @@ async function verificarUsuario() {
       });
 
       const data = await response.json();
+      if (response.status === 200) {
+        window.location.href = `/assets/html/menuprincipal.html?userId=${data.usuario._id}`; // Reemplaza con la ruta de tu otra página
+      }
       // Muestra el resultado en la página
-      console.log(data);
-      window.location.href= "/assets/html/Menuprincipal.html"
-      usuarioseleccionado=data;
+      //console.log(data);
+     // usuarioseleccionado=data;
     } catch (error) {
       console.error('Error al verificar usuario:', error);
       document.getElementById('resultado').innerText = 'Error al verificar usuario';
@@ -46,11 +47,7 @@ async function verificarUsuario() {
 
 
 
-  function cargausuario(){
-    document.getElementById("botonprof").innerHTML =`
-    <img src="${usuarioseleccionado.imagenPerfil}" id="userimg">
-    `;
-}
+
 
 
 

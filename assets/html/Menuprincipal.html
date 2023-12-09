@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/assets/js/controladormenup.js"></script>
-    <script src="/assets/js/controladorlogin.js"></script>
       <!-- CSS general para login-->
   <link rel="stylesheet" href="/assets/css/estilosmenup.css">
   <!-- Icons -->
@@ -30,8 +29,7 @@
 
     <div id="profilepictop">
         <div class="opcion-boton" onclick="" id="botonprof">
-            <script>cargausuario()</script>
-          <img src="/img/gohan.jpg" id="userimg">
+          <img src="../profile-pics/gohan.jpg" id="userimg">
         </div>
         <div class="dropdown-content">
             <a href="/assets/html/Menuprincipal.html">Menu Principal</a>
@@ -42,10 +40,9 @@
       </div>
   </nav>
   <!-- E N D  N A V B A R -->
-
      <!-- seccion 1-->
      <section id="seccionproyectos">
-        <div class="contenedorproyectos">
+        <div class="contenedorproyectos" id="contenedorprincipalproyectos">
 
             <div id="proyectonuevo" onclick="vermenunuevoproyecto()">
                 <div id="iconoproyectonuevo">
@@ -56,28 +53,10 @@
                 </div>
             </div>
 
-            <div id="proyecto" onclick="vermenunuevoproyecto()">
-                <div id="iconoproyecto">
-                    <i class="fa-solid fa-cloud"></i>
-                </div>
-                <div id="nombreproyecto">
-                    <h1>Prueba 1</h1>
-                </div>
-            </div>
-
-
-            <div id="proyecto" onclick="vermenunuevoproyecto()">
-                <div id="iconoproyecto">
-                    <i class="fa-solid fa-cloud"></i>
-                </div>
-                <div id="nombreproyecto">
-                    <h1>Prueba 1</h1>
-                </div>
-            </div>
-
         </div>
      </section>
      <!-- fin seccion 1-->
+     <script>verinfousuario()</script>
 
 </body>
 </html>
