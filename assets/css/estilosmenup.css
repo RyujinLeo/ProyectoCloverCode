@@ -166,3 +166,25 @@ font-size: 1rem;
   .dropdown-content a:hover{
     background-color: #ffffff;
   }
+
+
+  #contadordiv{
+    display: flex;
+  }
+
+#proyetosusuario{
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#separador{
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+#proyetoslimite{
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  font-weight: 300;
+}
