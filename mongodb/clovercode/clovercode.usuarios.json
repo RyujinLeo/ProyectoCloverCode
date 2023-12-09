@@ -5,7 +5,7 @@
   "nombre": "Naruto",
   "email": "naruto@gmail.com",
   "contrasena": "naruto123",
-  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "imagenPerfil": "../profile-pics/naruto.jpg",
   "tipocuenta": "gratis",
   "proyectos": [
     {
@@ -29,7 +29,7 @@
   "nombre": "Vegeta",
   "email": "vegeta@gmail.com",
   "contrasena": "vtgg123",
-  "imagenPerfil": "assets/profile-pics/vegeta.jpg",
+  "imagenPerfil": "../profile-pics/vegeta.jpg",
   "tipocuenta": "gratis",
   "proyectos": [
     {
@@ -53,7 +53,7 @@
   "nombre": "Baby",
   "email": "baby@gmail.com",
   "contrasena": "bb123",
-  "imagenPerfil": "assets/profile-pics/baby.jpg",
+  "imagenPerfil": "../profile-pics/baby.jpg",
   "tipocuenta": "premium",
   "proyectos": [
     {
@@ -77,9 +77,130 @@
   "nombre": "sasuke",
   "email": "sasuke@gmail.com",
   "contrasena": "sasuke1",
-  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "imagenPerfil": "../profile-pics/naruto.jpg",
   "tipocuenta": "gratis",
-  "proyectos": [],
+  "proyectos": [
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    },
+    {
+      "nombre": "proyecto55",
+      "html": "<h2>hola mundo</h2>",
+      "css": "h2{color: red}",
+      "js": "hh"
+    }
+  ],
   "__v": 0
 },
 {
@@ -89,7 +210,7 @@
   "nombre": "sasuke24",
   "email": "sasuke24@gmail.com",
   "contrasena": "uchiha",
-  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "imagenPerfil": "../profile-pics/naruto.jpg",
   "tipocuenta": "gratis",
   "proyectos": [],
   "__v": 0
@@ -101,7 +222,7 @@
   "nombre": "allan24",
   "email": "allan@gmail.com",
   "contrasena": "allan321",
-  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "imagenPerfil": "../profile-pics/naruto.jpg",
   "tipocuenta": "gratis",
   "proyectos": [],
   "__v": 0
@@ -113,7 +234,7 @@
   "nombre": "Roshi",
   "email": "roshi@gmail.com",
   "contrasena": "roshi123",
-  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "imagenPerfil": "../profile-pics/roshi.jpg",
   "tipocuenta": "gratis",
   "proyectos": [],
   "__v": 0
@@ -125,7 +246,43 @@
   "nombre": "leon21",
   "email": "leon21@gmail.com",
   "contrasena": "leon2",
-  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "imagenPerfil": "../profile-pics/naruto.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65740b6326fac74d6f1027e9"
+  },
+  "nombre": "Dende",
+  "email": "dende@gmail.com",
+  "contrasena": "dende123",
+  "imagenPerfil": "../profile-pics/dende.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65740bbf26fac74d6f1027ec"
+  },
+  "nombre": "leonardo21",
+  "email": "leonardo21@gmail.com",
+  "contrasena": "leonardo",
+  "imagenPerfil": "../profile-pics/naruto.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65744ff0bdec169b84fa0709"
+  },
+  "nombre": "asdasdasd",
+  "email": "assadsad@email.com",
+  "contrasena": "12345",
+  "imagenPerfil": "../profile-pics/naruto.jpg",
   "tipocuenta": "gratis",
   "proyectos": [],
   "__v": 0
