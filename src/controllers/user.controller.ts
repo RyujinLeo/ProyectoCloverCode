@@ -29,6 +29,30 @@ export const obtenerUsers = (req: Request, res: Response) => {
           .catch((error:any) => console.error(error));
   }
 
+  export const obtneruserlogin = async (req:Request, res:Response) => {
+      try {
+        const userId = req.params.userId;
+    
+        // Utiliza findOne() para buscar un usuario por ID
+        const usuario = await UserSchema.findOne({ _id: userId });
+    
+        // Si el usuario existe, envía la información del usuario
+        if (usuario) {
+          res.status(200).json({ usuario });
+        } else {
+          // Si el usuario no existe, envía una respuesta negativa
+          res.status(404).json({ mensaje: 'Usuario no encontrado' });
+        }
+      } catch (error) {
+        // Maneja cualquier error que pueda ocurrir durante la obtención de la información del usuario
+        res.status(500).json({ mensaje: 'Error en el servidor' });
+      }
+    };
+
+
+
+
+  
   export const obtenerUseremail = (peticion: Request, respuesta: Response) => {
     const userEmail = peticion.params.email; // enviuando email como parametro
     UserSchema.findOne({ email: userEmail })
@@ -55,8 +79,8 @@ export const obtenerUsers = (req: Request, res: Response) => {
         if (usuario) {
             if (usuario.contrasena === password) {
                 // Si la contraseña es correcta, envía una respuesta positiva
-                //res.status(200).json({ mensaje: 'Usuario verificado correctamente' });
-                res.send(usuario);
+                res.status(200).json({ mensaje: 'Usuario verificado correctamente', usuario });
+                //res.send(usuario);
               } else {
                 // Si la contraseña no es correcta, envía una respuesta negativa
                 res.status(401).json({ mensaje: 'Contraseña incorrecta' });
@@ -92,7 +116,7 @@ export const agregarusuario = async (req:Request, res:Response) => {
         nombre,
         email,
         contrasena: password,
-        imagenPerfil: "assets/profile-pics/naruto.jpg",
+        imagenPerfil: "../profile-pics/naruto.jpg",
         tipocuenta: "gratis",
         proyectos: [],
         // Otros campos que puedas necesitar

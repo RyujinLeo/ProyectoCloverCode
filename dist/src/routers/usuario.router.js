@@ -10,6 +10,7 @@ router.get('/', user_controller_1.obtenerUsers);
 router.get('/busqueda/:email', user_controller_1.obtenerUseremail);
 router.post('/login', user_controller_1.verificarusuario);
 router.post('/registrar', user_controller_1.agregarusuario);
-router.get('/:id', user_controller_1.obtenerUser);
+//router.get('/:id', obtenerUser);
+router.get('/:userId', user_controller_1.obtneruserlogin);
 router.put('/:id/proyecto', user_controller_1.addProyectoUser);
 exports.default = router;

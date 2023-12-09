@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addProyectoUser = exports.agregarusuario = exports.verificarusuario = exports.obtenerUseremail = exports.obtenerUser = exports.obtenerUsers = void 0;
+exports.addProyectoUser = exports.agregarusuario = exports.verificarusuario = exports.obtenerUseremail = exports.obtneruserlogin = exports.obtenerUser = exports.obtenerUsers = void 0;
 const usuario_schema_1 = require("../models/usuario.schema");
 const bcrypt = require('bcrypt');
 //obtener todos los users
@@ -35,6 +35,26 @@ const obtenerUser = (peticion, respuesta) => {
         .catch((error) => console.error(error));
 };
 exports.obtenerUser = obtenerUser;
+const obtneruserlogin = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const userId = req.params.userId;
+        // Utiliza findOne() para buscar un usuario por ID
+        const usuario = yield usuario_schema_1.UserSchema.findOne({ _id: userId });
+        // Si el usuario existe, envía la información del usuario
+        if (usuario) {
+            res.status(200).json({ usuario });
+        }
+        else {
+            // Si el usuario no existe, envía una respuesta negativa
+            res.status(404).json({ mensaje: 'Usuario no encontrado' });
+        }
+    }
+    catch (error) {
+        // Maneja cualquier error que pueda ocurrir durante la obtención de la información del usuario
+        res.status(500).json({ mensaje: 'Error en el servidor' });
+    }
+});
+exports.obtneruserlogin = obtneruserlogin;
 const obtenerUseremail = (peticion, respuesta) => {
     const userEmail = peticion.params.email; // enviuando email como parametro
     usuario_schema_1.UserSchema.findOne({ email: userEmail })
@@ -57,8 +77,8 @@ const verificarusuario = (req, res) => __awaiter(void 0, void 0, void 0, functio
         if (usuario) {
             if (usuario.contrasena === password) {
                 // Si la contraseña es correcta, envía una respuesta positiva
-                //res.status(200).json({ mensaje: 'Usuario verificado correctamente' });
-                res.send(usuario);
+                res.status(200).json({ mensaje: 'Usuario verificado correctamente', usuario });
+                //res.send(usuario);
             }
             else {
                 // Si la contraseña no es correcta, envía una respuesta negativa
@@ -91,7 +111,7 @@ const agregarusuario = (req, res) => __awaiter(void 0, void 0, void 0, function*
             nombre,
             email,
             contrasena: password,
-            imagenPerfil: "assets/profile-pics/naruto.jpg",
+            imagenPerfil: "../profile-pics/naruto.jpg",
             tipocuenta: "gratis",
             proyectos: [],
             // Otros campos que puedas necesitar
