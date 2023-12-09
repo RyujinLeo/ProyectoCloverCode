@@ -1,5 +1,4 @@
 var userId;
-var proyectoID;
 
 function corrercodigo(){
 let codigohtml = document.getElementById("codigo-html").value;
@@ -18,17 +17,22 @@ resultado.contentWindow.eval(codigojavas);
 function verinfousuario(){
     const urlParams = new URLSearchParams(window.location.search);
     userId = urlParams.get('userId');
-    proyectoID = urlParams.get('proyectoID');
-    
+    var proyectoID = urlParams.get('proyectoID');
+    //console.log('URL completa:', window.location.href);
+    //proyectoID = Number(urlParams.get('proyectoID'));  
+    proyectoID = Number(proyectoID);
+   // Convierte proyectoID a un número
+        //proyectoID = parseInt(proyectoID, 10);
+        console.log('Usuario ID:', userId);
+        console.log('Proyecto ID:', proyectoID);
       // Realizar una solicitud al servidor para obtener la información completa del usuario
       fetch(`http://localhost:3000/usuarios/${userId}`)
         .then(response => response.json())
         .then(data => {
           // Llenar el campo de foto con la información del usuario
           document.getElementById('botonprof').innerHTML =`<img src="${data.usuario.imagenPerfil}" id="userimg">`;
-          let proyector=[];
-          proyector= data.usuario.proyectos;
-          console.log(`${proyector[proyectoID].css}`);
+          let proyector= data.usuario.proyectos[proyectoID];
+          //console.log('Proyectos del usuario:', data.usuario.proyectos); // solo de prueba
           renderizarproyecto(proyector);
           //limites de proyectos y contadores
           // si es cuentagratis
@@ -43,10 +47,19 @@ function verinfousuario(){
     }
 
     const renderizarproyecto = (proyectosc) => {
-        let proyectar = [];
-        proyectar = proyectosc;
-        console.log(`${proyectar[0]}`);
-        //document.getElementById('codigo-html').value =`${proyectar[proyectoID]}`;
+    console.log('Proyecto recibido:', proyectosc);
+    //console.log(Array.isArray(proyectosc.html));
+
+// Accede directamente a las propiedades del objeto
+  const htmlString = proyectosc.html;
+  const cssString = proyectosc.css;
+  const jsString = proyectosc.js;
+
+  // Asigna los valores a los elementos del DOM
+  document.getElementById('codigo-html').value = htmlString;
+  document.getElementById('codigo-css').value = cssString;
+  document.getElementById('codigo-js').value = jsString;
+ 
     }
 
 

@@ -1,7 +1,6 @@
 var userId ;
 var proyectos = [];
-
-
+var idproyecto;
 function verinfousuario(){
 const urlParams = new URLSearchParams(window.location.search);
 userId = urlParams.get('userId');
@@ -80,9 +79,9 @@ function renderizarbotonnuevo () {
 }
 
 function vermenunuevoproyecto(index){
-    location.href= `/assets/html/nuevoproyecto.html?userId=${userId}?proyectoID=${index}`
-}
+    location.href= `/assets/html/nuevoproyecto.html?userId=${userId}&proyectoID=${index}`
 
+}
 function vermenupremium(){
     location.href= `/assets/html/premium.html?userId=${userId}`
 }
