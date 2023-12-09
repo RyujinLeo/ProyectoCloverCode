@@ -10,12 +10,11 @@ function registrar(){
     var isEmailValid = emailInput.checkValidity();
     var isPasswordValid = passwordInput.checkValidity();
 
-    // Check if all inputs are valid
      // Check if all inputs are valid
      if (isNameValid && isEmailValid && isPasswordValid) {
         alert("Validation correcta!");
+        agregarUsuario()
         // Redirect to another HTML file
-        window.location.href = "/assets/html/login.html";
     } else {
         alert("Por favor ingrese bien sus datos.");
        

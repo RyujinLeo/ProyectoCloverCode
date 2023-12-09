@@ -1,12 +1,12 @@
+var userId ;
+var proyectos = [];
 
-function vermenunuevoproyecto(){
-    location.href= "/assets/html/nuevoproyecto.html"
-
-}
 
 function verinfousuario(){
 const urlParams = new URLSearchParams(window.location.search);
-const userId = urlParams.get('userId');
+userId = urlParams.get('userId');
+document.getElementById('contenedorprincipalproyectos').innerHTML ='';
+
 
   // Realizar una solicitud al servidor para obtener la información completa del usuario
   fetch(`http://localhost:3000/usuarios/${userId}`)
@@ -17,7 +17,6 @@ const userId = urlParams.get('userId');
       let proyector=[];
       proyector= data.usuario.proyectos;
       console.log(proyector.length);
-      renderizarproyectos(proyector);
       document.getElementById('proyetosusuario').innerHTML = `${data.usuario.proyectos.length}`;
 
       //limites de proyectos y contadores
@@ -26,13 +25,17 @@ const userId = urlParams.get('userId');
         document.getElementById('proyetoslimite').innerHTML = '20';
         if (`${data.usuario.proyectos.length}`=='20'){
         console.log('no se pueden crear mas proyectos, limite alcanzado')
-        document.getElementById('proyectonuevo').style.display='none';
+        renderizarproyectos(proyector);
+        //document.getElementById('proyectonuevo').style.display='none';
         }else{
-
+            renderizarproyectos(proyector);
+            renderizarbotonnuevo ();
         }
         // si es cuenta premium
       } else if (`${data.usuario.tipocuenta}`=='premium'){
         document.getElementById('proyetoslimite').innerHTML = 'ilimitado';
+        renderizarproyectos(proyector);
+        renderizarbotonnuevo();
       }
 
     //limites de proyectos y contadores final
@@ -45,12 +48,13 @@ const userId = urlParams.get('userId');
 }
 
 const renderizarproyectos = (proyectosc) => {
-let proyectos = [];
+proyectos = [];
 proyectos=proyectosc;
 console.log(proyectos);
+let index=0;
 proyectos.forEach((proyecto) => {
     document.getElementById('contenedorprincipalproyectos').innerHTML +=
-    `<div id="proyecto" onclick="vermenunuevoproyecto()">
+    `<div id="proyecto" onclick="vermenunuevoproyecto(${index})">
                 <div id="iconoproyecto">
                     <i class="fa-solid fa-cloud"></i>
                 </div>
@@ -58,5 +62,30 @@ proyectos.forEach((proyecto) => {
                     <h1>${proyecto.nombre}</h1>
                 </div>
             </div>`;
+            index++;
 });
+}
+
+
+function renderizarbotonnuevo () {
+    document.getElementById('contenedorprincipalproyectos').innerHTML +=
+    `<div id="proyectonuevo" onclick="vermenunuevoproyecto()">
+        <div id="iconoproyectonuevo">
+        <i class="fa-solid fa-plus"></i>
+     </div>
+        <div id="nombreproyectonuevo">
+        <h1>Crear nuevo</h1>
+         </div>
+    </div>`;
+}
+
+function vermenunuevoproyecto(index){
+    location.href= `/assets/html/nuevoproyecto.html?userId=${userId}?proyectoID=${index}`
+}
+
+function vermenupremium(){
+    location.href= `/assets/html/premium.html?userId=${userId}`
+}
+function vermenuperfil(){
+    location.href= `/assets/html/perfil.html?userId=${userId}`
 }

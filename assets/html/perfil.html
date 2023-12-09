@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <script src=""></script>
+    <script src="/assets/js/controladorperfiles.js"></script>
     <!-- CSS general para login-->
 <link rel="stylesheet" href="/assets/css/perfiles.css">
 <!-- Icons -->
@@ -29,9 +29,9 @@
           <img src="/img/gohan.jpg" id="userimg">
         </div>
         <div class="dropdown-content">
-            <a href="/assets/html/Menuprincipal.html">Menu Principal</a>
-            <a href="/assets/html/premium.html">Comprar premium</a>
-            <a href="/assets/html/perfil.html">Informacion de perfil</a>
+          <a onclick="vermenuprin()">Menu Principal</a>
+          <a onclick="vermenupremium()">Comprar premium</a>
+          <a onclick="vermenuperfil()">Informacion de perfil</a>
             <a href="/assets/html/login.html">Cerrar sesion</a>
         </div>
       </div>
@@ -63,7 +63,7 @@
 
     <div id="contecttipocuenta">
       <h1>Tipo de cuenta: </h1>
-      <h1 id="nombre1">Gratis</h1>
+      <h1 id="tipocuenta">Gratis</h1>
     </div>
 
   </div>
@@ -71,5 +71,7 @@
 
  </section>
   <!-- Fin informacion -->
+
+  <script>verinfousuario()</script>
 </body>
 </html>
