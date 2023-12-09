@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "6572c0a39c29f82ae1fdbb93"
+  },
+  "nombre": "Naruto",
+  "email": "naruto@gmail.com",
+  "contrasena": "naruto123",
+  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [
+    {
+      "nombre": "proyecto",
+      "html": "<h1>hola</h1>\n<h2>como estan</h2>",
+      "css": "h1{\ncolor: red;\n}",
+      "js": ""
+    },
+    {
+      "nombre": "proyecto24",
+      "html": "<h1 onclick='colorclick(this)'>golita</h1>",
+      "css": "h1{color: red;}",
+      "js": "function colorclick(botton){botton.style.color = 'blue'}"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6573bb7022d1dd1c704e0051"
+  },
+  "nombre": "Vegeta",
+  "email": "vegeta@gmail.com",
+  "contrasena": "vtgg123",
+  "imagenPerfil": "assets/profile-pics/vegeta.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [
+    {
+      "nombre": "proyecto",
+      "html": "<h1>hola</h1>\n<h2>como estan</h2>",
+      "css": "h1{\ncolor: red;\n}",
+      "js": ""
+    },
+    {
+      "nombre": "proyecto25",
+      "html": "<h1 onclick='colorclick(this)'>golita</h1>",
+      "css": "h1{color: red;}",
+      "js": "function colorclick(botton){botton.style.color = 'blue'}"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6573bb8422d1dd1c704e0052"
+  },
+  "nombre": "Baby",
+  "email": "baby@gmail.com",
+  "contrasena": "bb123",
+  "imagenPerfil": "assets/profile-pics/baby.jpg",
+  "tipocuenta": "premium",
+  "proyectos": [
+    {
+      "nombre": "proyecto",
+      "html": "<h1>hola</h1>\n<h2>como estan</h2>",
+      "css": "h1{\ncolor: red;\n}",
+      "js": ""
+    },
+    {
+      "nombre": "proyecto25",
+      "html": "<h1 onclick='colorclick(this)'>golita</h1>",
+      "css": "h1{color: red;}",
+      "js": "function colorclick(botton){botton.style.color = 'blue'}"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6573f4898be6440ecda83dbb"
+  },
+  "nombre": "sasuke",
+  "email": "sasuke@gmail.com",
+  "contrasena": "sasuke1",
+  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6573f5028be6440ecda83dbe"
+  },
+  "nombre": "sasuke24",
+  "email": "sasuke24@gmail.com",
+  "contrasena": "uchiha",
+  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6573f54f8be6440ecda83dc1"
+  },
+  "nombre": "allan24",
+  "email": "allan@gmail.com",
+  "contrasena": "allan321",
+  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6573f6258be6440ecda83dc8"
+  },
+  "nombre": "Roshi",
+  "email": "roshi@gmail.com",
+  "contrasena": "roshi123",
+  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6573f8b0d72708f330896978"
+  },
+  "nombre": "leon21",
+  "email": "leon21@gmail.com",
+  "contrasena": "leon2",
+  "imagenPerfil": "assets/profile-pics/naruto.jpg",
+  "tipocuenta": "gratis",
+  "proyectos": [],
+  "__v": 0
+}]
